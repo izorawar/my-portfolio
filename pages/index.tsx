@@ -6,10 +6,17 @@ import About from '../components/About'
 import WorkExperience from '../components/WorkExperience'
 import Skills from '../components/Skills'
 import Projects from '../components/Projects'
+import { GetStaticProps } from 'next'
+import { Skill } from "../typings"
+import { fetchSkills } from '../utils/fetchSkills'
+
+type Props = {
+  skills: Skill[];
+}
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function Home({skills}: Props) {
   return (
     <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-scroll z-0">
       <Head>
@@ -31,7 +38,7 @@ export default function Home() {
       </section>
 
       <section id="skills" className='snap-start'>
-        <Skills />
+        <Skills skills={skills} />
       </section>
 
       <section id="projects" className='snap-start'>
@@ -39,4 +46,13 @@ export default function Home() {
       </section>
     </div>
   )
+}
+
+export const getStaticProps: GetStaticProps<Props> = async() => {
+  const skills: Skill[] = await fetchSkills();
+  return {
+    props: {
+      skills
+    }
+  }
 }
