@@ -10,6 +10,7 @@ import { GetStaticProps } from 'next'
 import { Skill } from "../typings"
 import { fetchSkills } from '../utils/fetchSkills'
 import ContactMe from '../components/ContactMe'
+import Link from 'next/link'
 
 type Props = {
   skills: Skill[];
@@ -49,6 +50,18 @@ export default function Home({skills}: Props) {
       <section id="contact" className='snap-start'>
         <ContactMe />
       </section>
+
+      <Link href="#hero">
+        <footer className='sticky bottom-5 w-full cursor-pointer'>
+          <div className='flex items-center justify-center'>
+            <img 
+            className='h-12 w-12 rounded-full filter grayscale hover:grayscale-0 cursor-pointer'
+            src="https://media.licdn.com/dms/image/D5603AQHxylp7eJKlHw/profile-displayphoto-shrink_800_800/0/1672872138832?e=1683158400&v=beta&t=pdSSkTw4QfHGs8GQP6Vh9Y6kIVvIeY8vKOeNfTVSLT4" 
+            alt="footer image" />
+          </div>
+
+        </footer>
+      </Link>
     </div>
   )
 }
