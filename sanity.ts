@@ -1,6 +1,6 @@
 import { createClient } from "next-sanity";
 import createImageUrlBuilder from "@sanity/image-url";
-import {schemaTypes} from '../my-portfolio/my-portfolio/schemas/index'
+import {schemaTypes} from './my-portfolio/schemas/index'
 
 export const config = {
     dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || "production",
