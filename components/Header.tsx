@@ -1,11 +1,13 @@
 import React from "react";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { Social } from "../typings";
 
-type Props = {};
+type Props = {
+  socials: Social[];
+};
 
-export default function Header({}: Props) {
+export default function Header({ socials }: Props) {
   return (
     <header className="sticky top-0 p-3 flex items-start justify-between max-w-6xl mx-auto z-20 xl:items-center">
       <motion.div
@@ -24,39 +26,50 @@ export default function Header({}: Props) {
         }}
         className="flex flex-row items-center"
       >
-        <SocialIcon
-          url="https://linkedin.com/in/izorawar"
-          fgColor="grey"
-          target="_blank"
-          bgColor="transparent"
-        />
-        <SocialIcon
+        {socials.map(socials => { 
+            return <SocialIcon
+            key={socials._id}
+            url={socials.url}
+            fgColor="currentColor"
+            target="_blank"
+            bgColor="transparent"
+            className="heroButton"
+          />
+        })}
+
+      
+        {/* <SocialIcon
           url="https://github.com/izorawar"
-          fgColor="grey"
+          fgColor="currentColor"
           target="_blank"
           bgColor="transparent"
+          className="heroButton"
         />
         <SocialIcon
           url="https://twitter.com/izorawar_"
-          fgColor="grey"
+          fgColor="currentColor"
           target="_blank"
           bgColor="transparent"
+          className="heroButton"
         />
         <SocialIcon
           url="https://instagram.com/zora__randhawa"
-          fgColor="grey"
+          fgColor="currentColor"
           target="_blank"
           bgColor="transparent"
+          className="heroButton"
         />
+
         <SocialIcon
           url="https://leetcode.com/izorawar"
-          fgColor="grey"
+          fgColor="currentColor"  
           target="_blank"
           bgColor="transparent"
-        />
+          className="heroButton"
+        /> */}
       </motion.div>
 
-      <Link href="#contact">
+        
         <motion.div
           initial={{
             x: 500,
@@ -78,12 +91,12 @@ export default function Header({}: Props) {
             network="email"
             fgColor="grey"
             bgColor="transparent"
+            url="#contact"
           />
-          <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
-            Get in Touch
+          <p  className="uppercase hidden md:inline-flex text-sm text-gray-400">
+            <a href="#contact">Get in Touch</a>
           </p>
         </motion.div>
-      </Link>
     </header>
   );
 }

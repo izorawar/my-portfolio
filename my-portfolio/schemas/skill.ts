@@ -26,5 +26,10 @@ export default defineType({
         hotspot: true,
       },
     },
+    {
+      name: "order",
+      title: "Order",
+      type: "number",
+    },
   ],
 })
