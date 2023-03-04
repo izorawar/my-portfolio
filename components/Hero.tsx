@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "../components/BackgroundCircles";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
 
 type Props = {};
 
@@ -45,6 +46,9 @@ export default function Hero({}: Props) {
           </Link>
           <Link href="#projects">
             <button className="heroButton">Projects</button>
+          </Link>
+          <Link href="https://izorawar.medium.com">
+            <button className="heroButton">Blog <ArrowTopRightOnSquareIcon className="align-[-2.80px] inline text-[#F7AB0A] h-5 w-5 animate-pulse"/></button>
           </Link>
         </div>
       </div>
