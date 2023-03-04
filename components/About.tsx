@@ -1,9 +1,13 @@
 import { motion } from 'framer-motion';
 import React from 'react'
+import { urlFor } from '../sanity';
+import { PageInfo } from '../typings';
 
-type Props = {}
+type Props = {
+  pageInfo: PageInfo;
+}
 
-export default function About({}: Props) {
+export default function About({pageInfo}: Props) {
   return (
     <motion.div 
         initial={{
@@ -26,7 +30,7 @@ export default function About({}: Props) {
             }}
             whileInView={{ opacity: 1, x: 0}}
             viewport={{ once: true}}
-            src="https://i.imgur.com/pJeFLog.jpg"
+            src={urlFor(pageInfo?.profilePic).url()}
             className="mt-20 md:mt-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg xl:w-[400px] xl:h-[400px]"
             id="aboutImage"
         / >
@@ -39,8 +43,8 @@ export default function About({}: Props) {
                 background
             </h4>
             <p className="text-sm md:text-base">
-                dummy text for now, will replace it, Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed animi aperiam quo earum. Ex nobis cumque quod accusantium quaerat? Ab placeat fugiat maiores iste veniam aut? Perferendis, voluptatibus cupiditate. Id?
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt expedita necessitatibus delectus adipisci quo officiis nemo Sit maiores illo praesentium laborum quos labore, odit mollitia ipsa id? Dolorum numquam eligendi corrupti? Quis porro, animi eligendi nemo voluptas libero!  </p>
+                {pageInfo?.backgroundInformation}
+            </p>
         </div>
     </motion.div>
   )

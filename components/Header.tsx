@@ -36,37 +36,6 @@ export default function Header({ socials }: Props) {
             className="heroButton"
           />
         })}
-
-      
-        {/* <SocialIcon
-          url="https://github.com/izorawar"
-          fgColor="currentColor"
-          target="_blank"
-          bgColor="transparent"
-          className="heroButton"
-        />
-        <SocialIcon
-          url="https://twitter.com/izorawar_"
-          fgColor="currentColor"
-          target="_blank"
-          bgColor="transparent"
-          className="heroButton"
-        />
-        <SocialIcon
-          url="https://instagram.com/zora__randhawa"
-          fgColor="currentColor"
-          target="_blank"
-          bgColor="transparent"
-          className="heroButton"
-        />
-
-        <SocialIcon
-          url="https://leetcode.com/izorawar"
-          fgColor="currentColor"  
-          target="_blank"
-          bgColor="transparent"
-          className="heroButton"
-        /> */}
       </motion.div>
 
         
