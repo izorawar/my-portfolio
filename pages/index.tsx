@@ -15,6 +15,7 @@ import { fetchPageInfo } from '../utils/fetchPageInfo'
 import { fetchExperiences } from '../utils/fetchExperiences'
 import { fetchProjects } from '../utils/fetchProjects'
 import { fetchSocials } from '../utils/fetchSocials'
+import { urlFor } from '../sanity'
 
 type Props = {
   pageInfo: PageInfo;
@@ -44,19 +45,19 @@ export default function Home({pageInfo, projects, socials, experiences, skills}:
       </section>
 
       <section id="experience" className='snap-center'>
-        <WorkExperience />
+        <WorkExperience experiences={experiences}/>
       </section>
 
       <section id="skills" className='snap-start'>
-        <Skills skills={skills} />
+        <Skills skills={skills}/>
       </section>
 
       <section id="projects" className='snap-start'>
-        <Projects />
+        <Projects projects={projects}/>
       </section>
 
       <section id="contact" className='snap-start'>
-        <ContactMe />
+        <ContactMe pageInfo={pageInfo}/>
       </section>
 
       <Link href="#hero">
@@ -64,7 +65,7 @@ export default function Home({pageInfo, projects, socials, experiences, skills}:
           <div className='flex items-center justify-center'>
             <img 
             className='h-12 w-12 rounded-full filter grayscale hover:grayscale-0 cursor-pointer'
-            src="https://media.licdn.com/dms/image/D5603AQHxylp7eJKlHw/profile-displayphoto-shrink_800_800/0/1672872138832?e=1683158400&v=beta&t=pdSSkTw4QfHGs8GQP6Vh9Y6kIVvIeY8vKOeNfTVSLT4" 
+            src={urlFor(pageInfo?.heroImage).url()}
             alt="footer image" />
           </div>
 

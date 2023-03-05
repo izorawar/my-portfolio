@@ -26,8 +26,8 @@ export default function Header({ socials }: Props) {
         }}
         className="flex flex-row items-center"
       >
-        {socials.map(socials => { 
-            return <SocialIcon
+        {socials.map(socials => ( 
+            <SocialIcon
             key={socials._id}
             url={socials.url}
             fgColor="currentColor"
@@ -35,7 +35,7 @@ export default function Header({ socials }: Props) {
             bgColor="transparent"
             className="heroButton"
           />
-        })}
+        ))}
       </motion.div>
 
         
