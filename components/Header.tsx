@@ -33,7 +33,7 @@ export default function Header({ socials }: Props) {
             fgColor="currentColor"
             target="_blank"
             bgColor="transparent"
-            className="heroButton"
+            className="socialIcons"
           />
         ))}
       </motion.div>

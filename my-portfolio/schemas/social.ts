@@ -16,5 +16,10 @@ export default defineType({
       title: 'Url',
       type: 'url',
     },
+    {
+      name: "order",
+      title: "Order",
+      type: "number",
+    },
   ],
 })

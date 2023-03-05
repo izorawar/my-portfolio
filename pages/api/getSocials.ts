@@ -16,6 +16,7 @@ export default async function handler(
     res: NextApiResponse<Data>
   ) {
     const socials: Social[] = await sanityClient.fetch(query);
+    socials.sort((a, b) => { return a.order - b.order });
     res.status(200).json({ socials })
   }
   
