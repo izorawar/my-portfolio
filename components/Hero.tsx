@@ -51,8 +51,11 @@ export default function Hero({pageInfo}: Props) {
           <Link href="#projects">
             <button className="heroButton">Projects</button>
           </Link>
-          <Link href="https://izorawar.medium.com" target="_blank">
+          <Link href={pageInfo?.blogLink} target="_blank">
             <button className="heroButton">Blog <ArrowTopRightOnSquareIcon className="align-[-.2rem] inline text-[#F7AB0A] h-5 w-5 animate-pulse"/></button>
+          </Link>
+          <Link href={pageInfo?.resumeLink} target="_blank">
+            <button className="heroButton">Resume <ArrowTopRightOnSquareIcon className="align-[-.2rem] inline text-[#F7AB0A] h-5 w-5 animate-pulse"/></button>
           </Link>
         </div>
       </div>

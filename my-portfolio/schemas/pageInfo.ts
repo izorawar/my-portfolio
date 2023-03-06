@@ -52,6 +52,16 @@ export default defineType({
       type: 'string',
     },
     {
+      name: 'blogLink',
+      title: 'BlogLink',
+      type: 'string',
+    },
+    {
+      name: 'resumeLink',
+      title: 'ResumeLink',
+      type: 'string',
+    },
+    {
       name: 'socials',
       title: 'Socials',
       type: 'array',
