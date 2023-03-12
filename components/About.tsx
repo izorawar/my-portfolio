@@ -42,7 +42,7 @@ export default function About({pageInfo}: Props) {
                 </span> {" "}
                 background
             </h4>
-            <p className="text-[12px] sm:text-sm md:text-base">
+            <p className="text-[12px] sm:text-sm md:text-base text-justify">
                 {pageInfo?.backgroundInformation}
             </p>
         </div>
