@@ -31,18 +31,18 @@ export default function About({pageInfo}: Props) {
             whileInView={{ opacity: 1, x: 0}}
             viewport={{ once: true}}
             src={urlFor(pageInfo?.profilePic).url()}
-            className="mt-20 md:mt-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg xl:w-[400px] xl:h-[400px]"
+            className="mt-20 md:mt-0 hidden md:block flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg xl:w-[400px] xl:h-[400px]"
             id="aboutImage"
         / >
         
-        <div className="space-y-4 px-0 md:px-10">
-            <h4 className="mt-0 text-2xl font-semibold md:text-4xl">Here is a {" "}
+        <div className="space-y-4 px-0 md:px-10 ">
+            <h4 className="mt-24 sm:mt-0 text-1xl sm:text-3xl font-semibold md:text-4xl">Here is a {" "}
                 <span className="underline decoration-[#F7AB0A]/50">
                      little 
                 </span> {" "}
                 background
             </h4>
-            <p className="text-sm md:text-base">
+            <p className="text-[12px] sm:text-sm md:text-base">
                 {pageInfo?.backgroundInformation}
             </p>
         </div>

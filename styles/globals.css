@@ -12,6 +12,18 @@
     }
 
     .contactInput {
-        @apply outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-[#F7AB0A]/40 focus:text-[#F7AB0A]/40 hover:border-[#F7AB0A]/40
+        @apply w-[120px] md:w-full outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-[#F7AB0A]/40 focus:text-[#F7AB0A]/40 hover:border-[#F7AB0A]/40 
+    }
+
+    .contactDiv {
+        @apply flex items-center space-x-2 md:space-x-5 justify-center
+    }
+
+    .contactIcon {
+        @apply text-[#F7AB0A] h-4 w-4 md:h-7 md:w-7 animate-pulse
+    }
+
+    .contactText {
+        @apply text-base md:text-lg
     }
 }
