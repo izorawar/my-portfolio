@@ -1,1 +1,1 @@
-<a href="https://jorawar-singh-portfolio-izorawar.vercel.app/">Live Now!</a>
+<a href="https://www.jorawar.me/">Live Now!</a>
