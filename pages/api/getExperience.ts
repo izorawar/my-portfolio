@@ -19,6 +19,7 @@ export default async function handler(
     res: NextApiResponse<Data>
   ) {
     const experiences: Experience[] = await sanityClient.fetch(query);
+    experiences.sort((a, b) => { return a.order - b.order });
     res.status(200).json({ experiences })
   }
   

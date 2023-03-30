@@ -60,6 +60,7 @@ export interface Experience extends SanityBody {
     jobTitle: string;
     points: string[];
     technologies: Technology[];
+    order: number;
 }
 
 export interface Skill extends SanityBody {
